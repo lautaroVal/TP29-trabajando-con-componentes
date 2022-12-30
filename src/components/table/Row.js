@@ -7,7 +7,13 @@ const Row = (props) => {
                 <td>{props.titulo}</td>
                 <td>{props.duracion}</td>
                 <td>{props.rating}</td>
-                <td>{props.genero}</td>
+                <td>
+                    <ul>
+                        {
+                            props.genero.map((item, i) => <li key= {item + i}>{item}</li>)
+                        }
+                    </ul>
+                </td>
                 <td>{props.premios}</td>
             </tr>
         </>
